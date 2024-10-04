@@ -97,7 +97,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../../assets/img/IMG_20230406_080720.jpg');
+  background-image: url('../../../assets/img/si.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -106,7 +106,6 @@ main {
   filter: blur(3px); /* Ajusta el nivel de desenfoque */
   z-index: -1;
 }
-
 /* Asegúrate de que los elementos internos no se vean afectados */
 .background-transparent * {
   position: relative;
@@ -297,7 +296,7 @@ ion-button:hover {
   border-radius: 5px;
   position: relative;
   z-index: 10;
-  margin-left: 50px; /* Ajusta el valor para moverlo más hacia la derecha */
+  margin-left: 10px; /* Ajusta el valor para moverlo más hacia la derecha */
 }
 
 .transparent-toolbar {  

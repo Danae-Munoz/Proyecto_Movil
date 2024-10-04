@@ -12,7 +12,12 @@ ion-header ion-img {
   height: auto;
   margin: 10px; /* Añadimos un pequeño margen */
 }
-
+.title {  
+  font-weight: bold; /* Para poner el texto en negritas */  
+  color: orange; /* Ajusta el color a naranja */  
+  font-size: 1.5rem;
+  animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
+}
 .background-image {
   width: 100%;
   height: 100%;
@@ -32,12 +37,6 @@ img.img-fluid {
   height: 100%;  
 }
 
-.title {  
-  font-weight: bold; /* Para poner el texto en negritas */  
-  color: orange; /* Ajusta el color a naranja */  
-  font-size: 2rem;
-  animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
-}
 .orange-button {
   --background: #FFA500; /* Color de fondo naranja */
   --color: #ffffff; /* Color del texto blanco */
@@ -82,11 +81,7 @@ ion-content {
   }
   
   /* Cambiar el tamaño de fuente del título */
-  .mi-panel-header .ion-title {
-  font-size: 20px;
-  font-weight: bold; /* Hacer que el título sea negrita */
-  color: #cc3a3a; /* Cambiar el color del texto del título */
-  }
+
 
 .content-container {
   display: flex;
@@ -97,9 +92,7 @@ ion-content {
   padding: 10px; /* Espaciado alrededor del contenido */
 }
 
-ion-title {
-  text-align: center;
-}
+
 
 ion-card-content.login {
   background-color: rgba(255, 128, 0, 0.7); /* Fondo semi-transparente */
