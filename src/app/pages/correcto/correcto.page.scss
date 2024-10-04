@@ -101,12 +101,17 @@ ion-toolbar {
 }
 
 /* Cambiar el tamaño de fuente del título */
-.mi-panel-header .ion-title {
+.mi-panel-header {
 font-size: 20px;
 font-weight: bold; /* Hacer que el título sea negrita */
 color: #cc3a3a; /* Cambiar el color del texto del título */
 }
-
+.title {  
+  font-weight: bold; /* Para poner el texto en negritas */  
+  color: orange; /* Ajusta el color a naranja */  
+  font-size: 1.5rem;
+  animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
+}
 .content-container {
 display: flex;
 flex-direction: column;
@@ -116,9 +121,7 @@ height: 90vh; /* Ajusta la altura como desees */
 padding: 10px; /* Espaciado alrededor del contenido */
 }
 
-ion-title {
-text-align: center;
-}
+
 
 ion-card-content.login {
   --background: transparent; /* Naranja con 50% de transparencia */

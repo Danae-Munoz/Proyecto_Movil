@@ -148,12 +148,37 @@ main {
 }
 /* CSS para la animación del texto */
 .animate-text {
-  animation: fadeIn 2s ease-in-out;
+  animation: moveRightFadeInOut 5s linear infinite;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes moveRightFadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%); /* Comienza fuera de la pantalla a la izquierda */
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0); /* Aparece suavemente en su posición inicial */
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(50%); /* Se mueve a la derecha, completamente visible */
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%); /* Se desvanece hacia la derecha, fuera de la pantalla */
+  }
+}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/img/IMG_20230406_080720.jpg'); /* Cambia a tu imagen */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Envía la imagen al fondo */
 }
 /* Firefox */
 * {
@@ -301,7 +326,43 @@ main {
   margin-left: 10px; /* Ajusta el valor para moverlo más hacia la derecha */
 }
 
-h1 {
+h1, h2 {
   font-weight: bold;
-  color: rgb(255, 145, 0); /* Aquí aplicas el color también */
+  color: rgb(155, 104, 9); /* Aquí aplicas el color también */
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Elimina los espacios entre bordes */
+  font-family: Arial, sans-serif; /* Fuente simple y formal */
+  background-color: rgba(255, 166, 0, 0.725);
+}
+
+th, td {
+  padding: 5px 5px;
+  border: 1px solid #000000; /* Borde fino y gris claro */
+  text-align: left;
+  background-color: rgba(255, 166, 0, 0.289);
+  color: #000000;
+}
+
+th {
+  background-color: rgba(255, 166, 0, 0.289); /* Color de fondo claro para el encabezado */
+  font-weight: bold;
+  color: #FF8C00; /* Texto oscuro para contraste */
+}
+
+td {
+  background-color: rgba(255, 166, 0, 0.289); /* Fondo blanco */
+  color: #000000; /* Texto gris oscuro */
+}
+
+tr:nth-child(even) td {
+  background-color: #ff8c000c; /* Alterna el color de fondo en filas pares */
+}
+
+tr:hover td {
+  background-color: #000000; /* Efecto hover para resaltar la fila */
+}
+.margin-top {
+  margin-top: 20px;
 }

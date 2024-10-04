@@ -15,7 +15,7 @@ ion-header ion-img {
 .title {  
   font-weight: bold; /* Para poner el texto en negritas */  
   color: orange; /* Ajusta el color a naranja */  
-  font-size: 1.5rem;
+  font-size: 1rem;
   animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
 }
 .background-image {
@@ -144,7 +144,8 @@ h4 {
 }
 
 h2 {
-  color: #070000;
+  color: #070000; /* Color del texto */
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
 }
 
 .item-inner {

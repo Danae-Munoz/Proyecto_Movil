@@ -139,14 +139,32 @@ main {
   overflow-x: hidden;
   
 }
+
 /* CSS para la animación del texto */
 .animate-text {
-  animation: fadeIn 2s ease-in-out;
+  animation: moveRightFadeInOut 5s linear infinite;
+}
+.item-native{
+  background-color: rgba(255, 165, 0, 0.2);
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes moveRightFadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%); /* Comienza fuera de la pantalla a la izquierda */
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0); /* Aparece suavemente en su posición inicial */
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(50%); /* Se mueve a la derecha, completamente visible */
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%); /* Se desvanece hacia la derecha, fuera de la pantalla */
+  }
 }
 /* Firefox */
 * {
@@ -304,10 +322,22 @@ ion-button:hover {
   font-weight: bold;
 }
 
-.transparent-item {  
-  --background: transparent; /* Para que el fondo sea transparente */  
-  font-weight: bold;
+.transparent-item {
+  background-color: rgba(255, 165, 0, 0.2);
+}
 
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/img/IMG_20230406_080720.jpg'); /* Cambia a tu imagen */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Envía la imagen al fondo */
 }
 
 

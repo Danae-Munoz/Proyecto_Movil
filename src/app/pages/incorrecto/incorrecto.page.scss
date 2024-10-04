@@ -41,11 +41,12 @@ ion-header ion-img {
   margin: 10px; /* Añadimos un pequeño margen */
 }
 
-.title{
+.title {  
   font-weight: bold; /* Para poner el texto en negritas */  
   color: orange; /* Ajusta el color a naranja */  
-  font-size: 2rem;
-} 
+  font-size: 1.5rem;
+  animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
+}
 
 /* Para asegurar que la imagen de fondo del ion-content cubra toda la página */ 
 img.img-fluid {  
