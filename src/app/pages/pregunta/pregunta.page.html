@@ -8,11 +8,10 @@
     </ion-col>  
     <ion-col size-md="3"></ion-col>  
   </ion-toolbar>  
-</ion-header> 
+</ion-header>   
 
-  <ion-content [fullscreen]="true">
-  <img src="/assets/icon/c-28b93bf742.webp" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; WIDTH:100%; height: 100%;">
-  <img src="../../../assets/img/IMG_20240405_141450.jpg" class="img-fluid"> 
+<ion-content [fullscreen]="true">
+  <img src="../../../assets/img/IMG_20240405_141450.jpg" style="width: 100%; height: 115%;" class="img-fluid"> 
   <div class="">
     <ion-card-content class="login ion-fade-in-up ion-animatable">
       <ion-title>
@@ -30,6 +29,7 @@
         <ion-col size="12">
           <br>
           <ion-button class="orange-button" shape="block" (click)="validarRespuestaSecreta()">Recuperar Contraseña</ion-button>
+          <ion-button  expand="block" class=" orange-button ion-margin-top"  (click)="volverAlInicio()"> Volver al Inicio </ion-button>
         </ion-col>
       </ion-row>
     </ion-card-content> 

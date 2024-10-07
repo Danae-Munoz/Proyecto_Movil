@@ -15,7 +15,7 @@
   </ion-toolbar>  
 </ion-header>  
 
-<ion-content [fullscreen]="true" class="ion-padding-horizontal ion-text-center fondo-pagina">  
+<ion-content [fullscreen]="true" class="ion-padding-horizontal ion-text-center ">  
   <ul class="breadcrumb">  
       <li><a (click)="navegar('/inicio')">Inicio</a></li>  
       <li><a (click)="navegar('/misdatos')">Mis Datos</a></li>  
@@ -23,14 +23,14 @@
       <li><a (click)="navegar('/ingreso')">Salir</a></li>  
     </ul> 
   <div class="background-image"></div> <!-- Imagen de fondo -->
-    <div style="background-color: rgba(255, 165, 0, 0.2);">  
-      <div class="enmarcar">  
+    <div style="background-color: rgba(255, 165, 0, 0.2);" class="ionic-text-center">  
+      <div class="enmarcar ionic-text-center">  
         <h1 > Bienvenido(a) {{ usuario.nombre }} {{ usuario.apellido }} </h1>  
         <h2 *ngIf="!datosQR">Escanea el código QR para registrar tu asistencia a clases.</h2>  
         <video #video [hidden]="!escaneando" style="width: 100%;"></video>  
         <canvas #canvas hidden></canvas>  
         <div class="margin-top">  
-          <ion-button class="orange-button" *ngIf="!escaneando" (click)="comenzarEscaneoQR()" shape="round">  
+          <ion-button class="orange-button " *ngIf="!escaneando" (click)="comenzarEscaneoQR()" shape="round">  
             <ion-icon slot="start" name="videocam-outline"></ion-icon>  
             Comenzar escaneo de QR  
           </ion-button>  

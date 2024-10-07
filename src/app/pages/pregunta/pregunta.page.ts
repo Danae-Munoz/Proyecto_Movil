@@ -50,4 +50,7 @@ export class PreguntaPage implements OnInit {
       this.router.navigate(['incorrecto']);
     }
   }
+  volverAlInicio() {
+    this.router.navigate(['/ingreso']);
+  }
 }

@@ -12,31 +12,6 @@ ion-header ion-img {
   height: auto;
   margin: 10px; /* Añadimos un pequeño margen */
 }
-.title {  
-  font-weight: bold; /* Para poner el texto en negritas */  
-  color: orange; /* Ajusta el color a naranja */  
-  font-size: 1rem;
-  animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
-}
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-img.img-fluid {  
-  position: absolute;  
-  right: 0;  
-  top: 0;  
-  z-index: -100; /* Asegúrate de que el z-index esté lo suficientemente bajo */  
-  width: 100%;  
-  height: 100%;  
-}
-
 .orange-button {
   --background: #FFA500; /* Color de fondo naranja */
   --color: #ffffff; /* Color del texto blanco */
@@ -50,6 +25,41 @@ img.img-fluid {
 .orange-button:hover {
   --background: #FF8C00; /* Color de fondo naranja más oscuro al pasar el ratón */
 }
+body{
+  background-image: url("../../../assets/img/pao2.png");
+}
+
+.title {  
+  font-weight: bold; /* Para poner el texto en negritas */  
+  color: orange; /* Ajusta el color a naranja */  
+  font-size: 1.4rem;
+  animation: moverTittle 5s ease-in-out infinite; /* Usar la animación definida */
+}
+
+img.img-fluid {  
+  position: absolute;  
+  right: 0;  
+  top: 0;  
+  z-index: -100; /* Asegúrate de que el z-index esté lo suficientemente bajo */  
+  width: 100%;  
+  height: 100%;  
+}
+
+.center-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 100%;           /* Ocupa toda la altura de la pantalla */
+}
+
+.logo{
+  margin-top: 20px;
+}
+
+ion-toolbar {  
+  --background: transparent; /* Hace el fondo de la barra de herramientas transparente */  
+}
+
 /* Agrega una capa de superposición semitransparente */
 .background-overlay {
   width: 100%;
@@ -60,14 +70,6 @@ img.img-fluid {
   background-color: rgba(255, 0, 0, 10); /* Ajusta el color y la opacidad de la superposición */
   z-index: -1;
 }
-
-ion-toolbar {  
-  --background: transparent; /* Hace el fondo de la barra de herramientas transparente */  
-} 
-
-ion-content {  
-  --background: transparent; /* Asegúrate de que el contenido también sea transparente si es necesario */  
-}  
 
 /* Resto de estilos... */
 
@@ -81,7 +83,11 @@ ion-content {
   }
   
   /* Cambiar el tamaño de fuente del título */
-
+  .mi-panel-header .ion-title {
+  font-size: 20px;
+  font-weight: bold; /* Hacer que el título sea negrita */
+  color: #cc3a3a; /* Cambiar el color del texto del título */
+  }
 
 .content-container {
   display: flex;
@@ -92,14 +98,16 @@ ion-content {
   padding: 10px; /* Espaciado alrededor del contenido */
 }
 
-
+ion-title {
+  text-align: center;
+}
 
 ion-card-content.login {
-  background-color: rgba(255, 128, 0, 0.7); /* Fondo semi-transparente */
-  margin-top: 60px;
-  padding: 50px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  --background: transparent; /* Naranja con 50% de transparencia */
+  background-color: rgba(255, 154, 53, 0.705); /* Fondo semi-transparente */
+  padding: 5px;
+  border-radius: 15px; 
 }
 
 ion-button {
@@ -144,8 +152,7 @@ h4 {
 }
 
 h2 {
-  color: #070000; /* Color del texto */
-  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  color: #070000;
 }
 
 .item-inner {

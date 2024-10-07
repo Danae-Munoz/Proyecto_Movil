@@ -219,8 +219,6 @@ main {
   background-color: #FFA500;
   padding: 6px;
   border-radius: 5px;
-  position: relative; /* O absolute, según el caso */
-  z-index: 10; /* Asegúrate de que esté encima de otros elementos */
 }
 
 .breadcrumb li {
@@ -331,7 +329,7 @@ h1, h2 {
   border-radius: 5px;
   position: relative;
   z-index: 10;
-  margin-left: 10px; /* Ajusta el valor para moverlo más hacia la derecha */
+  margin-left: 5px; /* Ajusta el valor para moverlo más hacia la derecha */
 }
 
 .login {
