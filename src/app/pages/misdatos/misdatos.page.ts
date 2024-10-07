@@ -18,9 +18,14 @@ export class MisdatosPage implements AfterViewInit {
   @ViewChild('itemCuenta', { read: ElementRef }) itemCuenta!: ElementRef;
   @ViewChild('itemNombre', { read: ElementRef }) itemNombre!: ElementRef;
   @ViewChild('itemApellido', { read: ElementRef }) itemApellido!: ElementRef;
+  @ViewChild('itemCorreo', { read: ElementRef }) itemCorreo!: ElementRef;
+  @ViewChild('itemPreguntaSecreta', { read: ElementRef }) itemPreguntaSecreta!: ElementRef;
+  @ViewChild('itemRespuestaSecreta', { read: ElementRef }) itemRespuestaSecreta!: ElementRef;
   @ViewChild('itemEducacion', { read: ElementRef }) itemEducacion!: ElementRef;
   @ViewChild('itemFechaNacimiento', { read: ElementRef }) itemFechaNacimiento!: ElementRef;
-  
+  @ViewChild('itemPassword', { read: ElementRef }) itemPassword!: ElementRef;
+  @ViewChild('itemConfirmPassword', { read: ElementRef }) itemConfirmPassword!: ElementRef;
+
   public listaNivelesEducacionales = NivelEducacional.getNivelesEducacionales();
   public usuario: Usuario;
 
@@ -48,8 +53,13 @@ export class MisdatosPage implements AfterViewInit {
     this.usuario.cuenta = '';
     this.usuario.nombre = '';
     this.usuario.apellido = '';
+    this.usuario.correo = '';
+    this.usuario.preguntaSecreta = '';
+    this.usuario.respuestaSecreta = '';
     this.usuario.nivelEducacional = NivelEducacional.buscarNivelEducacional(1)!;
     this.usuario.fechaNacimiento = undefined;
+    this.usuario.password = '';
+    this.usuario.confirmPassword = '';
   }
 
   limpiarAnimandoDerIzq() {
@@ -57,8 +67,13 @@ export class MisdatosPage implements AfterViewInit {
     this.animarDerIzq(this.itemCuenta.nativeElement, 100);
     this.animarDerIzq(this.itemNombre.nativeElement, 200);
     this.animarDerIzq(this.itemApellido.nativeElement, 300);
-    this.animarDerIzq(this.itemEducacion.nativeElement, 400);
-    this.animarDerIzq(this.itemFechaNacimiento.nativeElement, 500);
+    this.animarDerIzq(this.itemCorreo.nativeElement, 400);
+    this.animarDerIzq(this.itemPreguntaSecreta.nativeElement, 500);
+    this.animarDerIzq(this.itemRespuestaSecreta.nativeElement, 600);
+    this.animarDerIzq(this.itemEducacion.nativeElement, 700);
+    this.animarDerIzq(this.itemFechaNacimiento.nativeElement, 800);
+    this.animarDerIzq(this.itemPassword.nativeElement, 900);
+    this.animarDerIzq(this.itemConfirmPassword.nativeElement, 500);
   }
 
   limpiarAnimandoRotacion() {

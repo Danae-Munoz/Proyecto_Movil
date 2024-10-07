@@ -10,6 +10,7 @@ export class Usuario extends Persona {
   public password: string;
   public preguntaSecreta: string;
   public respuestaSecreta: string;
+  public confirmPassword: string;
   public asistencia: Asistencia;
   public listaUsuarios: Usuario[];
   static crearListausuariosValidos: any;
@@ -25,6 +26,7 @@ export class Usuario extends Persona {
     this.apellido = '';
     this.nivelEducacional = NivelEducacional.buscarNivelEducacional(1)!;
     this.fechaNacimiento = undefined;
+    this.confirmPassword= '';
     this.asistencia = this.asistenciaVacia();
     this.listaUsuarios = [];
   }
@@ -53,7 +55,8 @@ export class Usuario extends Persona {
     nombre: string,
     apellido: string,
     nivelEducacional: NivelEducacional,
-    fechaNacimiento: Date | undefined
+    fechaNacimiento: Date | undefined,
+    confirmPassword:string
   ) {
     let usuario = new Usuario();
     usuario.cuenta = cuenta;
@@ -65,6 +68,7 @@ export class Usuario extends Persona {
     usuario.apellido = apellido;
     usuario.nivelEducacional = nivelEducacional;
     usuario.fechaNacimiento = fechaNacimiento;
+    usuario.confirmPassword = confirmPassword;
     return usuario;
   }
 
@@ -78,9 +82,10 @@ export class Usuario extends Persona {
           '¿Cuál es tu animal favorito?', 
           'gato', 
           'Ana', 
-          'Torres', 
+          'Torres',
           NivelEducacional.buscarNivelEducacional(6)!,
-          new Date(2000, 0, 1)
+          new Date(2000, 0, 1),
+          '1234'
         )
       );
       this.listaUsuarios.push(
@@ -93,7 +98,8 @@ export class Usuario extends Persona {
           'Juan',
           'Pérez',
           NivelEducacional.buscarNivelEducacional(5)!,
-          new Date(2000, 1, 1)
+          new Date(2000, 1, 1),
+          '5678'
         )
       );
       this.listaUsuarios.push(
@@ -106,7 +112,8 @@ export class Usuario extends Persona {
           'Carla',
           'Mujica',
           NivelEducacional.buscarNivelEducacional(6)!,
-          new Date(2000, 2, 1)
+          new Date(2000, 2, 1),
+          '5678'
         )
       );
     }
@@ -175,6 +182,7 @@ export class Usuario extends Persona {
               nav.extras.state['cuenta']);
               this.cuenta= encontrado!.cuenta
               this.password= encontrado!.password
+              this.confirmPassword= encontrado!.confirmPassword
               this.correo= encontrado!.correo
               this.preguntaSecreta= encontrado!.preguntaSecreta
               this.respuestaSecreta= encontrado!.respuestaSecreta
@@ -222,6 +230,7 @@ export class Usuario extends Persona {
       usu.nivelEducacional =this.nivelEducacional;
       usu.fechaNacimiento =this.fechaNacimiento;
       usu.asistencia =this.asistencia;
+      usu.confirmPassword=this.confirmPassword;
     }
 
   }
