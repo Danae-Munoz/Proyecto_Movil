@@ -57,6 +57,18 @@
             label="Apellido" labelPlacement="floating"  
             placeholder="Ej: Torres"></ion-input>  
       </ion-item>  
+
+      <ion-item #itemCorreo class="">  
+        <ion-input [(ngModel)]="usuario.correo"   
+            label="Correo" labelPlacement="floating"  
+            placeholder="Ej: atorres@duocuc.cl"></ion-input>  
+      </ion-item> 
+      
+      <ion-item #itemPreguntaSecreta class="">  
+        <ion-input [(ngModel)]="usuario.preguntaSecreta"   
+            label="Pregunta Secreta" labelPlacement="floating"  
+            placeholder="Ej: ¿Nombre de tu mascota?"></ion-input>  
+      </ion-item> 
       
       <ion-item #itemEducacion class="font-size-12 ">  
         <ion-select [(ngModel)]="usuario.nivelEducacional!.id"  
